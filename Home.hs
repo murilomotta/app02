@@ -10,7 +10,7 @@ postProdutoR :: Handler ()
 postProdutoR = do
     prod <- requireJsonBody :: Handler Produto
     pid <- runDB $ insert prod
-    sendResponse (object [pack "resp" .= pack "CREATED"])
+    sendResponse (object [pack "resp" .= pack ("CREATED " ++ show pid)])
 
 getHomeR :: Handler Html
 getHomeR = defaultLayout $ do

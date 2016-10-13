@@ -8,7 +8,6 @@ executable          aula
   main-is:          Main.hs
   other-modules:    Foundation
                     Application
-                    Add
                     Home
                     
   ghc-options:      -Wall -fwarn-tabs -O2
