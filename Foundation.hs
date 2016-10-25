@@ -16,6 +16,7 @@ Person json
     firstname Text
     lastname Text
     manager PersonId Maybe
+    worksin DeptoId Maybe
     deriving Show
     
 Depto json
