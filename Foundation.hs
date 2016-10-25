@@ -23,11 +23,6 @@ Depto json
     name Text
     secretary PersonId
     deriving Show
-    
-Works json
-    personid PersonId
-    deptoid DeptoId
-    UniquePersonDepto personid deptoid
 |]
 
 mkYesodData "App" $(parseRoutesFile "routes")
