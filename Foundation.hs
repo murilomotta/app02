@@ -12,10 +12,21 @@ import Database.Persist.Postgresql
 data App = App {connPool :: ConnectionPool }
 
 share [mkPersist sqlSettings, mkMigrate "migrateAll"] [persistLowerCase|
-Produto json
-    nome Text
-    preco Double
+Person json
+    firstname Text
+    lastname Text
+    manager PersonId Maybe
     deriving Show
+    
+Depto json
+    name Text
+    secretary PersonId
+    deriving Show
+    
+Works json
+    personid PersonId
+    deptoid DeptoId
+    UniquePersonDepto personid deptoid
 |]
 
 mkYesodData "App" $(parseRoutesFile "routes")

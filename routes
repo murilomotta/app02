@@ -1,2 +1,4 @@
-/                 HomeR     GET
-/produto          ProdutoR  POST
+/person          PersonR     POST
+/people          PeopleR     GET
+/secretary       SecretaryR  GET
+/department      DeptoR      POST
